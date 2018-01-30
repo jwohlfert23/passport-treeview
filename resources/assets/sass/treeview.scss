@@ -1,0 +1,47 @@
+.tree-children {
+  margin-left: 16px;
+}
+
+.tree-arrow {
+  cursor: pointer;
+  margin-right: 6px;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 9px;
+  transition: transform .3s;
+
+  &:after {
+    content: ' ';
+  }
+}
+
+.has-children > .tree-arrow:after {
+  content: '▾'
+}
+
+.tree-arrow-collapsed {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.folder {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+    background: lighten($brand-primary, 35%);
+    border-color: lighten($brand-primary, 15%);
+  }
+}
