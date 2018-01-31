@@ -69,6 +69,11 @@ const validate = (values) => {
   if (!values.max)
     errors.max = "Please enter a max value"
 
+  if (!errors.min && !errors.max) {
+    if (values.min > values.max)
+      errors.min = "Please enter a value that is less than your max value"
+  }
+
   return errors
 }
 
